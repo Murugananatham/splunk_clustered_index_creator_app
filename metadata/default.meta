@@ -33,3 +33,8 @@ export = system
 [viewstates]
 access = read : [ * ], write : [ * ]
 export = system
+
+[views/splunk_index_manager__clustered]
+owner = admin
+version = 9.0.1
+modtime = 1667680318.010138900

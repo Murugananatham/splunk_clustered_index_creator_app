@@ -1,0 +1,15 @@
+<form version="1.1" theme="dark">
+  <label>Splunk Index Manager - Clustered</label>
+  <fieldset submitButton="false">
+    <input type="dropdown" token="app_name">
+      <label>App Name</label>
+      <fieldForLabel>label</fieldForLabel>
+      <fieldForValue>title</fieldForValue>
+      <search>
+        <query>| rest /services/apps/local | table label title core author | search core=0</query>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </search>
+    </input>
+  </fieldset>
+</form>
